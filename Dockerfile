@@ -1,2 +1,2 @@
 FROM tomcat:8
-COPY /target*.war /opt/tomcat/webapps
+COPY /var/lib/jenkins/workspace/docker-ansible-demo/target/WebApp.war /opt/tomcat/webapps
