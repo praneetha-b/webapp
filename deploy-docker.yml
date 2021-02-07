@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: True
+  tasks:
+    - name: Install python pip
+      yum:
+       name: python-pip
+       state: present
+    - name: install  python module
+      pip:
+         name: docker-py
+         state: present
+    - name: start the container
+      docker_container:
+         name:webapp1
+         image:"praneetha22/webapp1:v1"
+         state:started
