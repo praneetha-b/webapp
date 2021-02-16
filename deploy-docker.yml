@@ -15,3 +15,5 @@
          name:dock-ansi2
          image:"praneetha22/doc-ansi2:v1.1"
          state:started
+		 published_Ports:
+		   - 0.0.0.0:8080:8080
