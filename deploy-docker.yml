@@ -4,23 +4,16 @@
   tasks:
     - name: Install python pip
       yum:
-        name: python-pip
-        state: present
-    - name: Install docker
-      yum:
-        name: docker
-        state: present
-    - name: start docker
-      service:
-        name: docker
-        state: started
-        enabled: yes
-    - name: Install docker-py python module
+       name: python-pip
+       state: present
+    - name: install  python module
       pip:
-        name: docker-py
-        state: present
+         name: docker-py
+         state: present
     - name: Start the container
       docker_container:
         name: hariapp
         image: "praneetha22/doc-ansi2:v1.1"
-        state: started	
+        state: started
+        published_ports:
+          - 0.0.0.0:8080:8080
