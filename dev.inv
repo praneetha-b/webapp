@@ -1,2 +1,1 @@
-[dev]
-172.31.39.86 ansible_user=ansadmin 
+3.14.8.120 ansible_user=ansadmin ansible_connection=ssh
