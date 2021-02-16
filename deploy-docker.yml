@@ -15,5 +15,4 @@
         name: hariapp
         image: "praneetha22/doc-ansi2:v1.1"
         state: started
-        
 		
